@@ -9,13 +9,14 @@
     width: 100%;
     height: 80px;
     background-color: rgba(0,0,0, .7);
+    z-index: 1;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     width: 100%;
 }
 
@@ -66,8 +67,113 @@
 }
 
 .page {
-    background-color: aqua;
+    background-color: black;
 }
+
+.slider {
+}
+
+.slider .slick-arrow {
+    position: absolute;
+    margin-right: 30px;
+    margin-left: 30px;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 40px;
+    height: 70px;
+    border: none;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 0;
+    background: url("/img/arrow-left.svg") 0 0 / 100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 0;
+    background: url("/img/arrow-right.svg") 0 0 / 100% no-repeat;
+}
+
+/* Точки (булиты) */
+.slider .slick-dots{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+.slider .slick-dots li{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0 10px;
+}
+/* Элемент точки */
+.slider .slick-dots li button{
+    font-size: 0;
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 50%;
+    border: none;
+}
+.slider .slick-dots li.slick-active button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    opacity: 100%;
+}
+
+.slider-item {
+    position: relative;
+}
+
+.slider-item__img {
+    width: 1920px;
+    height: 700px;
+}
+
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
 
 .footer {
     background-color: green;

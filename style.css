@@ -140,6 +140,9 @@
 }
 
 .slider-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     min-height: 100vh;
     top: 0;
@@ -148,7 +151,6 @@
 
 .slider-content {
     position: relative ;
-    transform: translateY(50%);
     z-index: 1;
 }
 

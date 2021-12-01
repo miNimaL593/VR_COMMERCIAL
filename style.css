@@ -191,6 +191,7 @@
 
 .slider-form {
     position: relative;
+    top: 100px;
     left: 10%;
 }
 

@@ -129,6 +129,8 @@
     opacity: 50%;
     border-radius: 50%;
     border: none;
+    cursor: pointer;
+
 }
 .slider .slick-dots li.slick-active button {
     background-color: transparent;
@@ -138,9 +140,12 @@
 
 .slider-item {
     max-height: 95vh;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-.slider-text {
+.slider-text__name {
     position: absolute;
     max-width: 700px;
     top: 25%;
@@ -153,19 +158,68 @@
 .slider-text__info {
     position: absolute;
     max-width: 700px;
-    top: 50%;
+    top: 55%;
     left: 10%;
     font-size: 24px;
     font-weight: 500;
     color: white;
 }
 
-.slider-item__img {
-    max-width: 100%;
-    max-height: 100%;
-    /*background-size: cover;*/
+.slider-text__info-name {
+    padding-top: 25px;
 }
 
+.slider-item__img {
+    max-height: 100%;
+}
+
+.slider-form {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+
+.slider-form__button {
+    padding: 15px 60px 15px 60px;
+    border: 2px solid #ffffff;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+    outline: none;
+    background-position: center center;
+    background-color: transparent ;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.slider-form__button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: rgba(255,255,255, .8);
+    z-index: -1;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+}
+
+.slider-form__button:hover {
+    border: 2px solid transparent;
+    color: rgba(0,0,0, .9);
+}
+
+.slider-form__button:hover:after {
+    width: 110%;
+}
 
 /* Слайдер */
 .slick-slider{}

@@ -171,21 +171,17 @@
 }
 
 .slider-item__content {
-    position: relative;
+    max-width: 60%;
     z-index: 1;
 }
 
 .slider-text__name {
-    position: relative;
-    max-width: 700px;
-    font-size: 64px;
     font-weight: 600;
     color: white;
+    font-size: calc(14px + 35 * (100vw /1280));
 }
 
 .slider-text__info {
-    position: relative;
-    max-width: 700px;
     font-size: 24px;
     font-weight: 500;
     color: white;
@@ -214,6 +210,7 @@
 
 .slider-form {
     position: relative;
+    padding-top: 80px;
 }
 
 .slider-form__button {

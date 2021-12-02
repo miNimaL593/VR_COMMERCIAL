@@ -182,13 +182,16 @@
 }
 
 .slider-text__info {
-    font-size: 24px;
+    /*font-size: 24px;*/
     font-weight: 500;
     color: white;
+    font-size: calc(12px + 12 * (100vw /1280));
 }
 
 .slider-text__info-name {
     padding-top: 25px;
+    font-size: calc(12px + 12 * (100vw /1280));
+    color: white;
 }
 
 .slider-item__img {

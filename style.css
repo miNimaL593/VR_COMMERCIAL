@@ -55,7 +55,7 @@
 }
 
 .header-logo__img {
-    max-width: 50px;
+    max-width: 60px;
 }
 
 .header-nav {
@@ -65,6 +65,7 @@
 
 .header-nav__list {
     display: flex;
+    font-family: 'Circe',Arial,sans-serif;
 }
 
 
@@ -88,7 +89,7 @@
     background-repeat: no-repeat;
     background-size: 0 2px;
     transition: background-size .3s;
-    font-size: calc(8px + 12 * (100vw /1280));
+    font-size: calc(8px + 8 * (100vw /1280));
 }
 
 
@@ -184,26 +185,30 @@
     padding-top: 80px;
     padding-bottom: 80px;
     max-width: 100%;
+    font-family: 'Circe',Arial,sans-serif;
     z-index: 1;
 }
 
 .slider-text__name {
     font-weight: 600;
     color: white;
-    font-size: calc(14px + 35 * (100vw /1280));
+    font-size: calc(16px + 35 * (100vw /1280));
 }
 
 .slider-text__info {
-    /*font-size: 24px;*/
-    font-weight: 500;
+    padding-top: 25px;
+    max-width: 60%;
+    font-weight: lighter;
     color: white;
     font-size: calc(12px + 12 * (100vw /1280));
+    opacity: 0.7;
 }
 
 .slider-text__info-name {
     padding-top: 25px;
     font-size: calc(12px + 12 * (100vw /1280));
     color: white;
+    opacity: 0.7;
 }
 
 .slider-item__img {
@@ -232,7 +237,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 10px 30px 10px 30px;
+    padding: 10px 35px 10px 35px;
     min-width: 120px;
     min-height: 20px;
     border: 2px solid #ffffff;
@@ -245,7 +250,7 @@
     outline: none;
     background-position: center center;
     background-color: transparent ;
-    font-size: calc(8px + 12 * (100vw /1280));
+    font-size: calc(6px + 12 * (100vw /1280));
     color: #fff;
     cursor: pointer;
 }

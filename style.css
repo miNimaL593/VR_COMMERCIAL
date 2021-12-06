@@ -1,5 +1,13 @@
+body  {
+
+}
+
 .wrapper {
     flex: 1 1 auto;
+}
+
+.wrapper:after {
+
 }
 
 .header {
@@ -23,7 +31,7 @@
     margin: auto;
     padding-left: 40px;
     padding-right: 40px;
-    max-width: 1200px;
+    max-width: 1400px;
     width: 100%;
 }
 
@@ -47,9 +55,10 @@
     }
     h1 {
         font-size: calc(10px + 35 * ((100vw - 320px) /1280));
-
     }
+
 }
+
 .header-logo {
     color: white;
 }
@@ -102,6 +111,7 @@
 
 .slider {
     position: relative;
+    /*margin-bottom: 100px;;*/
 }
 
 .slider .slick-arrow {
@@ -205,7 +215,7 @@
 }
 
 .slider-text__info-name {
-    padding-top: 25px;
+    padding-top: 35px;
     font-size: calc(12px + 12 * (100vw /1280));
     color: white;
     opacity: 0.7;
@@ -213,7 +223,7 @@
 
 .slider-item__img {
     position: absolute;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, .6);
     left: 0;
     top: 0;
     width: 100%;
@@ -320,6 +330,82 @@
 .slick-dots li.slick-active{}
 /* Элемент точки */
 .slick-dots li button{}
+
+.information-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 100vh;
+}
+
+.information-box__jpg {
+
+}
+
+.information-box__jpg-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 50vh;
+    top: 0;
+    left: 0;
+    max-width: 35%;
+}
+
+.information-box__text {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    vertical-align: center;
+    top: 0;
+    left: 0;
+    max-width: 60%;
+}
+
+.information-box__text-heading {
+    color: #000000;
+    font-size: calc(24px + 8 * (100vw /1280));
+    font-family: 'Circe',Arial,sans-serif;
+    line-height: 1.2;
+    font-weight: 600;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.information-box__text-info {
+    color: #000000;
+    font-size: calc(12px + 4 * (100vw /1280));
+    font-family: 'Circe',Arial,sans-serif;
+    line-height: 1.55;
+    font-weight: 200;
+    background-position: center center;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.information-box__text-info p {
+    padding-top: 30px;
+    padding-bottom: 1%;
+    opacity: .8;
+}
+
+@media (max-width:767px) {
+    .information-box {
+        display: inline-block;
+    }
+    .information-box__jpg-item {
+        min-width: 100%;
+    }
+
+    .information-box__text {
+        top: 0;
+        left: 0;
+        min-width: 100%;
+    }
+}
+
 
 .footer {
     background-color: green;

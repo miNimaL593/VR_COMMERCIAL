@@ -1,4 +1,16 @@
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
 body  {
+
+
 
 }
 
@@ -107,6 +119,7 @@ body  {
 }
 
 .page {
+
 }
 
 .slider {
@@ -419,13 +432,14 @@ body  {
 
 .popup {
     position: fixed;
+    height: 100vh;
     width: 100%;
-    height: 100%;
     background-color: rgba(0,0,0,.8) ;
     top: 0;
     left: 0;
     opacity: 0;
     visibility: hidden;
+    z-index: 2;
 }
 
 .popup:target {
@@ -442,16 +456,18 @@ body  {
 }
 
 .popup-content {
+    display: flex;
     position: relative;
+    justify-content: space-between;
     background-color: white;
     color: black;
-    max-width: 800px;
-    padding: 30px;
+    max-width: 1000px;
+    padding: 30px 50px 30px 50px;
 }
 
 .popup-close {
     position: absolute;
-    right: 15px;
+    right: 25px;
     top: 10px;
     font-size: 20px;
     color: black;
@@ -463,10 +479,77 @@ body  {
 }
 
 .popup-title {
-    font-size: 40px;
-    margin: 0px 0px 1em 0px;
+    font-size: calc(16px + 8 * (100vw /1280));
+    max-width: 30%;
+    font-weight: bold;
+    border-right: 1px solid #000000;
+    align-content: center;
 }
 
-.popup-text {
+.popup-form {
+    display: flex;
+    min-width: 60%;
+}
 
+.form {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form-input{
+    padding: 5px 0px 5px 10px;
+    border: 2px solid rgba(0,0,0, .4);
+}
+
+.form-input:hover {
+    border: 2px solid rgba(0,0,0, .8);
+}
+
+.form-button {
+    text-align: center;
+    justify-content: center;
+    padding: 10px 35px 10px 35px;
+    min-width: 120px;
+    min-height: 20px;
+    border: 2px solid rgba(0,0,0, 0.4);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 150ms ease-in-out;
+    transition: color 150ms ease-in-out;
+    outline: none;
+    background-position: center center;
+    background-color: transparent ;
+    font-size: calc(6px + 12 * (100vw /1280));
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.form-button:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: rgba(0,0,0, .9);
+    z-index: -1;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+}
+
+.form-button:hover {
+    border: 2px solid transparent;
+    color: rgba(255,255,255, .9);
+}
+
+.form-button:hover:after {
+    width: 110%;
 }

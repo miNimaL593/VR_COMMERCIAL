@@ -333,13 +333,10 @@ body  {
 
 .information-box {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
-    max-height: 100vh;
-}
-
-.information-box__jpg {
-
+    min-height: 100vh;
 }
 
 .information-box__jpg-item {
@@ -347,10 +344,12 @@ body  {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 50vh;
-    top: 0;
-    left: 0;
+    min-height: 100vh;
     max-width: 35%;
+}
+
+.information-box__img {
+
 }
 
 .information-box__text {
@@ -394,9 +393,12 @@ body  {
 @media (max-width:767px) {
     .information-box {
         display: inline-block;
+
     }
     .information-box__jpg-item {
+        min-height: 50vh;
         min-width: 100%;
+
     }
 
     .information-box__text {

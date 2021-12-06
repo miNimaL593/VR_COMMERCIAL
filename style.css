@@ -238,13 +238,12 @@ body  {
     z-index: -1;
 }
 
-.slider-form {
+.slider-popup {
     position: relative;
     padding-top: 80px;
 }
 
-.slider-form__button {
-    display: flex;
+.slider-popup__link {
     text-align: center;
     justify-content: center;
     padding: 10px 35px 10px 35px;
@@ -263,9 +262,10 @@ body  {
     font-size: calc(6px + 12 * (100vw /1280));
     color: #fff;
     cursor: pointer;
+    text-decoration: none;
 }
 
-.slider-form__button:after {
+.slider-popup__link:after {
     content: '';
     position: absolute;
     display: block;
@@ -281,12 +281,12 @@ body  {
     transition: width 350ms ease-in-out;
 }
 
-.slider-form__button:hover {
+.slider-popup__link:hover {
     border: 2px solid transparent;
     color: rgba(0,0,0, .9);
 }
 
-.slider-form__button:hover:after {
+.slider-popup__link:hover:after {
     width: 110%;
 }
 
@@ -345,7 +345,7 @@ body  {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    max-width: 35%;
+    max-width: 40%;
 }
 
 .information-box__img {
@@ -359,7 +359,7 @@ body  {
     vertical-align: center;
     top: 0;
     left: 0;
-    max-width: 60%;
+    max-width: 55%;
 }
 
 .information-box__text-heading {
@@ -390,15 +390,19 @@ body  {
     opacity: .8;
 }
 
+@media (max-width:992px) {
+    .information-box__jpg-item {
+        min-height: 100vh;
+    }
+}
+
 @media (max-width:767px) {
     .information-box {
         display: inline-block;
-
     }
     .information-box__jpg-item {
-        min-height: 50vh;
+        min-height: 70vh;
         min-width: 100%;
-
     }
 
     .information-box__text {
@@ -411,4 +415,58 @@ body  {
 
 .footer {
     background-color: green;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8) ;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px 30px 10px ;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    color: black;
+    max-width: 800px;
+    padding: 30px;
+}
+
+.popup-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.popup-title {
+
+}
+
+.popup-title {
+    font-size: 40px;
+    margin: 0px 0px 1em 0px;
+}
+
+.popup-text {
+
 }

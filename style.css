@@ -142,7 +142,7 @@ body  {
 
 .slider .slick-arrow.slick-next {
     right: 0;
-    background: url("/img/arrow-right.svg") 0 0 / 100% no-repeat;
+    background: url("img/arrow-right.svg") 0 0 / 100% no-repeat;
 
 }
 

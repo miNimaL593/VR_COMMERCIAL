@@ -7,7 +7,6 @@ input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s eas
 input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 
-
 body  {
 
 
@@ -263,6 +262,7 @@ body  {
     min-width: 120px;
     min-height: 20px;
     border: 2px solid #ffffff;
+    border-radius: 5px;
     font-weight: 600;
     position: relative;
     overflow: hidden;
@@ -459,7 +459,8 @@ body  {
     display: flex;
     position: relative;
     justify-content: space-between;
-    background-color: rgba();
+    background-color: rgba(0,0,0,.4);
+    border-radius: 40px;
     color: black;
     max-width: 1000px;
     min-height: 300px;
@@ -472,7 +473,7 @@ body  {
     right: 25px;
     top: 10px;
     font-size: 20px;
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -497,7 +498,7 @@ body  {
 }
 
 .form-input{
-    padding: 5px 0px 5px 10px;
+    padding: 5px 0px 5px 20px;
     border: 2px solid rgba(0,0,0, .4);
     border-radius: 20px;
 }
@@ -522,8 +523,8 @@ body  {
     transition: color 150ms ease-in-out;
     outline: none;
     background-position: center center;
-    background-color: transparent ;
-    font-size: calc(6px + 12 * (100vw /1280));
+    background-color: rgba(255,255,255, .2) ;
+    font-size: calc(6px + 14 * (100vw /1280));
     color: #ffffff;
     cursor: pointer;
     text-decoration: none;

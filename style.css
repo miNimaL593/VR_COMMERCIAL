@@ -580,6 +580,13 @@ body  {
     border-radius: 20px;
 }
 
+
+
+.popup-form__check {
+    font-size: calc(8px + 4 * (100vw /1280));
+    color: white;
+}
+
 .form-input:hover {
     border: 2px solid rgba(0,0,0, .8);
 }

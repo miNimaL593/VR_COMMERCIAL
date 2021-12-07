@@ -543,8 +543,8 @@ body  {
 .popup-close {
     position: absolute;
     right: 25px;
-    top: 10px;
-    font-size: 20px;
+    top: 15px;
+    font-size: 25px;
     color: white;
     text-decoration: none;
     transition: .5s;

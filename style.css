@@ -509,6 +509,7 @@ body  {
     height: 100%;
     top: 0;
     left: 0;
+    cursor: default;
 }
 
 .popup:target .popup-content {
@@ -589,6 +590,10 @@ body  {
 
 .form-input:hover {
     border: 2px solid rgba(0,0,0, .8);
+}
+
+.form-input:focus{
+    outline: none;
 }
 
 .form-button {
